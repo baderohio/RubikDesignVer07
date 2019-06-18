@@ -30,12 +30,16 @@
 <body>
 
 
-<h2>Rubik Faces</h2>
-<p>Please input a number between 2 and 3 that represent matrix dimension:</p>
+<h2>Rotation Rubik Faces</h2>
+<!--Enter data--><!-- -->
+<p>Enter matrix dimension that is positive integer:</p>
 <input id="numb" value="3">
-<button  type="button" onclick="dataVaidateFunction()">Submit</button>
-<button id="btnRun" type="button" onclick="guiFunction()">Run</button>
+<button  type="button" onclick="dataVaidateFunction()">Enter</button>
 <p id="demo"></p>
+<p>Display orthographic faces for Rubik object</p>
+<button id="btnRun" type="button" onclick="guiFunction()">Display</button>
+<br><br>
+
 
 <!-- Create rubic orthographic -->
 <div class="grid-container">
@@ -54,35 +58,53 @@
 </div>
 <br><br>
 <div>
-<p>Push button to initialize virtual matrix</p>
+
+<!--initialize six color matrix saver code with zero -->
+<p>Push button to initialize virtual matrix that stor color code for faces</p>
  <button type="button" onclick="initializeFunction()">initialization</button>
  <p id="demo1"></p>
-<p>Choose axis rotation</p>
-  <select id="axisRotation">
-  
-  
+ 
+ <!-- chooses rotation of axis x,y, x -->
+  <table>
+  <tr>
+  <td><p>Choose axis rotation</p></td>
+  <td>
+    <select id="axisRotation">
     <option value="x">X</option>
-
-    <option value="y">Y</option>
-	
-    <option value="z">Z</option>
-	
+    <option value="y">Y</option>	
+    <option value="z">Z</option>	
   </select>
-  <br><br>
+  </td>
+  </tr>
+   <tr>
+  <td>  <!-- two direction of rotation Clockwise and Anticlockwise-->
+  <!--in this code will choose only Clockwise-->
+  <!-- because three Clockwise rotation will equal one Anticlockwise-->
   <p>Choose direction of rotation</p>
-    <select id="typeRotation">
+  </td>
+  <td><select id="typeRotation">
     <option value="cw">Clockwise</option>
-	<!--
-    <option value="anticw">Anticlockwise</option>
-	-->
-  </select>
-  <br><br>
+    <!--<option value="anticw">Anticlockwise</option>-->
+    </select></td>
+  </tr>
+  <tr>
+  <td>
+  <!--3 maximum step rotation around one axis that make any 
+  cell reach the required faces -->
   <p>Choose step of rotation</p>
+  </td>
+  <td>
   <select id="stepRotation">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   </select>
+  </td>
+  </tr>
+  </table>
+  
+ 
+
     </select>
   <br><br>
   <p>Choose position of cell to be rotate between 1 and matrix dimension</p>
@@ -97,11 +119,9 @@
   <option value="3">3</option> -->
   <!--
   </select>-->
+  <br><br> 
+  <button type="button" onclick="rotationFunction()">Rotate</button>
   
-  <br><br>
-  
-  <button type="button" onclick="rotationFunction()">Submit</button>
-
 </div>
 <p id="demo1"></p>
 
