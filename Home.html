@@ -1,0 +1,113 @@
+<!--
+/*
+* Programmer : Dr.-Ing. Bader Juma
+* Date       : June 17, 2019
+* File       : Home.html
+* Purpose    : GUI of Rubik Desing
+*/
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <style>
+
+  .grid-container {
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+                   }
+   .grid-item { background-color: #F3C17C;}
+    body {background-color: white;}
+    table, td {border: 1px solid #ffffff;}
+    td {padding: 10px;}	
+	
+
+	
+  </style>  
+</head>
+
+<body>
+
+
+<h2>Rubik Faces</h2>
+<p>Please input a number between 2 and 3 that represent matrix dimension:</p>
+<input id="numb" value="3">
+<button  type="button" onclick="dataVaidateFunction()">Submit</button>
+<button id="btnRun" type="button" onclick="guiFunction()">Run</button>
+<p id="demo"></p>
+
+<!-- Create rubic orthographic -->
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>  
+  <div class="grid-item"><table id="top"></table></div>    
+  <div class="grid-item">4</div>
+  <div class="grid-item"><table id="back"></table></div>
+  <div class="grid-item"><table id="rightside"></table></div>  
+  <div class="grid-item"><table id="front"></table></div>
+  <div class="grid-item"><table id="leftside"></table></div>
+  <div class="grid-item">9</div>  
+  <div class="grid-item">10</div> 
+  <div class="grid-item"><table id="bottom"></table></div>  
+  <div class="grid-item">12</div> 
+</div>
+<br><br>
+<div>
+<p>Push button to initialize virtual matrix</p>
+ <button type="button" onclick="initializeFunction()">initialization</button>
+ <p id="demo1"></p>
+<p>Choose axis rotation</p>
+  <select id="axisRotation">
+  
+  
+    <option value="x">X</option>
+
+    <option value="y">Y</option>
+	
+    <option value="z">Z</option>
+	
+  </select>
+  <br><br>
+  <p>Choose direction of rotation</p>
+    <select id="typeRotation">
+    <option value="cw">Clockwise</option>
+	<!--
+    <option value="anticw">Anticlockwise</option>
+	-->
+  </select>
+  <br><br>
+  <p>Choose step of rotation</p>
+  <select id="stepRotation">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  </select>
+    </select>
+  <br><br>
+  <p>Choose position of cell to be rotate between 1 and matrix dimension</p>
+  <input id="cellRotation" value="2">
+   <!--
+  <select id="cellRotation">-->
+  <!--
+  <option value="1">1</option> -->
+  <!--
+  <option value="2">2</option> -->
+  <!--
+  <option value="3">3</option> -->
+  <!--
+  </select>-->
+  
+  <br><br>
+  
+  <button type="button" onclick="rotationFunction()">Submit</button>
+
+</div>
+<p id="demo1"></p>
+
+<!--Call javaScript code for create rubic orthographic -->
+<script src="mainFunctionScript.js"></script>
+<script src="branchFunctionScript.js"></script>
+
+</body>
+</html>
