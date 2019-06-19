@@ -63,15 +63,12 @@ function rotationFunction() {
   if ( axisVar == "x" ) {
 	// rotate matrix around X axis for selected cell in the middle not edge
 	matrixXaxisRotationFunction(cellLocation, numStepRot, matrixDimension,  rightsideArr, bottomArr, leftsideArr, topArr);
-    //cellColorXYZaxisRotationFunction(cL, cellLocation, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr, topArr, bottomArr, colorFace);	
    // rotate front matrix edges 
    if (cellLocation == 1) {
     clockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, frontArr, 2);	
-	//frontCellColorXaxisRotationFunction(cL, cellLocation, matrixDimension, frontArr, colorFace);
 	}	
    if (cellLocation == matrixDimension) {
 	antiClockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, backArr, 0);
-	//backCellColorXaxisRotationFunction(cL, cellLocation, matrixDimension, backArr, colorFace);
 	} 
 	}
 	
@@ -79,16 +76,13 @@ function rotationFunction() {
  if ( axisVar == "y" ) { 
     //rotate matrix around Y axis for selected cell in the middle not edge
     matrixYaxisRotationFunction(cellLocation, numStepRot, matrixDimension, topArr, frontArr, bottomArr, backArr);	
-	//cellColorXYZaxisRotationFunction(cL, cellLocation, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr, topArr, bottomArr, colorFace);
 	// rotate rightside matrix edges 
    if (cellLocation == 1) {	
 	antiClockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, rightsideArr, 1);
-	//rightsideCellColorYaxisRotationFunction(cL, cellLocation, matrixDimension, rightsideArr, colorFace);
 	}
    // rotate leftside matrix edges 
    if (cellLocation == matrixDimension) {
 	clockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, leftsideArr, 3);
-	//leftsideCellColorYaxisRotationFunction(cL, cellLocation, matrixDimension, leftsideArr, colorFace);
 	} 
 	}
 	
@@ -96,19 +90,15 @@ function rotationFunction() {
  if ( axisVar == "z" ) {
    //rotate matrix around Z axis for selected cell in the middle not edge
    matrixZaxisRotationFunction(cellLocation, numStepRot, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr);
-   // rotate cell color around Z axis for selected cell in the middle not edge
-   //cellColorXYZaxisRotationFunction(cL, cellLocation, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr, topArr, bottomArr, colorFace);
    //rotate top matrix edges 
    if (cellLocation == 1) {
 	clockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, topArr, 4);
-	//topCellColorZaxisRotationFunction(cL, cellLocation, matrixDimension, topArr, colorFace);
 	} 
    if (cellLocation == matrixDimension) {	
 	antiClockWiseMatrixaxisRotationFunction(numStepRot, matrixDimension, bottomArr, 5);
-	//bottomCellColorZaxisRotationFunction(cL, cellLocation, matrixDimension, bottomArr, colorFace);
 	}
     }
-	
+	// give cells faces color
 	cellColorXYZaxisRotationFunction(cL, cellLocation, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr, topArr, bottomArr, colorFace);	
                              }
 
