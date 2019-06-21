@@ -1,6 +1,6 @@
 /*
 * Programmer : Dr.-Ing. Bader Juma
-* Date       : June 17, 2019
+* Date       : June 21, 2019
 * File       : branchFunctionScript.js
 * Purpose    : contain all functions that used by main function
 */

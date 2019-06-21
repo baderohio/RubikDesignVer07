@@ -1,7 +1,7 @@
 <!--
 /*
 * Programmer : Dr.-Ing. Bader Juma
-* Date       : June 17, 2019
+* Date       : June 21, 2019
 * File       : Home.html
 * Purpose    : GUI of Rubik Desing
 */
@@ -18,39 +18,41 @@
 </head>
 
 <body>
-
-
+<br>
+<div class ="rub">
 <h2>Rotation Rubik Faces</h2>
+
+
 <!--Enter data--><!-- -->
 <p>Enter matrix dimension that is positive integer:</p>
 <input id="numb" value="3">
 <button  type="button" onclick="dataVaidateFunction()">Enter</button>
-<p id="demo"></p>
 <p>Display orthographic faces for Rubik object</p>
 <button id="btnRun" type="button" onclick="guiFunction()">Display</button>
+</div>
 <br><br>
 
 
 <!-- Create rubic orthographic -->
 <div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>  
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>  
   <div class="grid-item"><table id="top"></table></div>    
-  <div class="grid-item">4</div>
+  <div class="grid-item"></div>
   <div class="grid-item"><table id="back"></table></div>
   <div class="grid-item"><table id="rightside"></table></div>  
   <div class="grid-item"><table id="front"></table></div>
   <div class="grid-item"><table id="leftside"></table></div>
-  <div class="grid-item">9</div>  
-  <div class="grid-item">10</div> 
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div> 
   <div class="grid-item"><table id="bottom"></table></div>  
-  <div class="grid-item">12</div> 
+  <div class="grid-item"></div> 
 </div>
 <br><br>
-<div>
 
+<div class ="rub">
 <!--initialize six color matrix saver code with zero -->
-<p>Push button to initialize virtual matrix that stor color code for faces</p>
+<p>Push button to initialize virtual matrix that store color code for faces</p>
  <button type="button" onclick="initializeFunction()">initialization</button>
  <p id="demo1"></p>
  
@@ -113,8 +115,8 @@
   <button type="button" onclick="rotationFunction()">Rotate</button>
   
 </div>
-<p id="demo1"></p>
 
+<br>
 <!--Call javaScript code for create rubic orthographic -->
 <script src="mainFunctionScript.js"></script>
 <script src="branchFunctionScript.js"></script>

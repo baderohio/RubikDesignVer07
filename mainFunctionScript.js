@@ -1,6 +1,6 @@
 /*
 * Programmer : Dr.-Ing. Bader Juma
-* Date       : June 17, 2019
+* Date       : June 21, 2019
 * File       : mainFunctionScript.js
 * Purpose    : Create GUI and rotation function
 */
@@ -20,7 +20,8 @@ $("#btnRun").attr("disabled", true);
 function dataVaidateFunction(){
      // Get the value of the input field with id="numb"
       matrixDimension = parseInt(document.getElementById("numb").value); 
-      document.getElementById("demo").innerHTML = checkInputFunction(matrixDimension);
+      //document.getElementById("demo").innerHTML = checkInputFunction(matrixDimension);
+	  window.alert(checkInputFunction(matrixDimension));
 	  if(checkInputFunction(matrixDimension)=="Input OK")
 	       $("#btnRun").attr("disabled", false);
        else {

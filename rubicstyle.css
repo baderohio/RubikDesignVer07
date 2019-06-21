@@ -1,13 +1,21 @@
+/*
+* Programmer : Dr.-Ing. Bader Juma
+* Date       : June 21, 2019
+* File       : rubicstyle.css
+* Purpose    : external file that contain style
+*/
 
-
-  .grid-container {
+ html {background-color: #23B9B7;}
+  body, .rub {margin: 0px;  width: 95%; margin: auto;} 
+ .grid-container {
    display: grid;
+   background-color: #89905B;
    grid-template-columns: auto auto auto auto;
                    }
-   .grid-item { background-color: #F3C17C;}
-    body {background-color: white;}
+    body {background-color: #BBBDB4;}
     table, td {border: 1px solid #ffffff;}
-    td {padding: 10px;}	
+    td {padding: 20px;}	
+	
 	
 
 	
