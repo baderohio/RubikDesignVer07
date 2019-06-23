@@ -10,8 +10,8 @@
  var cL = ["ba", "ri","fr","le","to","bo"]; // cell id
  var fL = ["back", "rightside","front","leftside", "top", "bottom"]; // table id
  var colorFace = ["Green", "Tan", "RoyalBlue", "DarkRed", "Yellow", "White"]; // faces color
- var colorCode=["0", "1", "2", "3", "4", "5"]; // code number for color faces
  //var colorFace = ["#08960A", "#CD9834", "#3364FB", "#BC0B00", "#FFFB03", "#FFFDFF"];
+ var colorCode=["0", "1", "2", "3", "4", "5"]; // code number for color faces
  var backArr =[], rightsideArr =[], frontArr =[], leftsideArr =[], topArr =[], bottomArr =[], tempArr =[]; 
  
 //initialization disable Display button   
@@ -20,8 +20,7 @@ $("#btnRun").attr("disabled", true);
 function dataVaidateFunction(){
      // Get the value of the input field with id="numb"
       matrixDimension = parseInt(document.getElementById("numb").value); 
-      //document.getElementById("demo").innerHTML = checkInputFunction(matrixDimension);
-	  window.alert(checkInputFunction(matrixDimension));
+      document.getElementById("demo").innerHTML = checkInputFunction(matrixDimension);	  
 	  if(checkInputFunction(matrixDimension)=="Input OK")
 	       $("#btnRun").attr("disabled", false);
        else {
@@ -48,8 +47,7 @@ function initializeFunction() {
          topArr[i] = colorCode[4];
          bottomArr[i] = colorCode[5];
                                                           }
-	 //document.getElementById("demo1").innerHTML = "Successful matrix initilization";
-	 window.alert("Successful matrix initilization");
+	 document.getElementById("demo1").innerHTML = "Successful matrix initilization";
                                }
 
   // rotation around Axis X, Y, Z

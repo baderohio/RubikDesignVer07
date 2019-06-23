@@ -5,6 +5,7 @@
 * Purpose    : contain all functions that used by main function
 */
 
+//Validate input data
 function checkInputFunction(matrixDimension){
 	//declare variables
 	var text;
@@ -15,12 +16,11 @@ function checkInputFunction(matrixDimension){
        } else {
     text = "Input OK";
                }
-			   return text;
-			   
+			   return text;		   
 }
 
-function createFaceFunction(matrixDimension, cL, fL) {
-	  
+// create the table cells
+function createFaceFunction(matrixDimension, cL, fL) {	  
  //Define variables and array
   var i, j, k, text;
   var arr =[];
@@ -43,8 +43,7 @@ function createFaceFunction(matrixDimension, cL, fL) {
 }
 
 //color each cells separatelly
-function colorCellsFunction(matrixDimension, cL, colorFace) {
-	
+function colorCellsFunction(matrixDimension, cL, colorFace) {	
  //Define variables and array
   var i, j, k, temp;
   
@@ -73,11 +72,11 @@ function initializeMatrixFunction(backArr, rightsideArr, frontArr, leftsideArr, 
          topArr[i] = colorCode[4];
          bottomArr[i] = colorCode[5];
                                                           }
-                                                                                                                               }
+                                                            }
  
  //rotate matrix around X-axis for cell in middle not edge give color
  // k repsent step rotation in middle in clock wise dircetion
- // axisVar = X, numStepRot = 1, cellLocation = middle;
+ // axisVar = X, numStepRot = 1, 2, 3, cellLocation = middle;
 function matrixXaxisRotationFunction(cellLocation, numStepRot, matrixDimension, rightsideArr, bottomArr, leftsideArr, topArr) {
  // define variables
    var j, i, k, ii, jj, temp;
@@ -100,7 +99,7 @@ function matrixXaxisRotationFunction(cellLocation, numStepRot, matrixDimension, 
 
   //rotate matrix around Y-axis for cell in middle not edge give color
   // k repsent step rotation in middle in clock wise dircetion
-  // axisVar = Y, numStepRot = 1, cellLocation = middle; 
+  // axisVar = Y, numStepRot = 1,2,3, cellLocation = middle; 
  function matrixYaxisRotationFunction(cellLocation, numStepRot, matrixDimension, topArr, frontArr, bottomArr, backArr) {
    // define variables
    var i, k, temp;
@@ -119,7 +118,7 @@ function matrixXaxisRotationFunction(cellLocation, numStepRot, matrixDimension, 
 
  //rotate matrix around Z-axis for cell in middle not edge give color
  // k repsent step rotation in middle in clock wise dircetion
- // axisVar = Z, numStepRot = 1, cellLocation = middle;
+ // axisVar = Z, numStepRot = 1,2,3, cellLocation = middle;
 function matrixZaxisRotationFunction(cellLocation, numStepRot, matrixDimension, backArr, rightsideArr, frontArr, leftsideArr) {
  // define variables
  var i, k, temp; 

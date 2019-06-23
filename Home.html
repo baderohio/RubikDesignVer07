@@ -20,19 +20,23 @@
 <body>
 <br>
 <div class ="rub">
-<h2>Rotation Rubik Faces</h2>
-
-
+<h1>Rotation Rubik Faces</h2>
 <!--Enter data--><!-- -->
 <p>Enter matrix dimension that is positive integer:</p>
-<input id="numb" value="3">
-<button  type="button" onclick="dataVaidateFunction()">Enter</button>
-<p>Display orthographic faces for Rubik object</p>
-<button id="btnRun" type="button" onclick="guiFunction()">Display</button>
+<table>
+<tr>
+<td><input id="numb" value="3"></td>
+<td><button  type="button" onclick="dataVaidateFunction()">Enter</button></td>
+<td><p id = "demo"></p></td>
+</tr>
+<tr>
+<td><p>Display orthographic faces for Rubik object</p></td>
+<td><button id="btnRun" type="button" onclick="guiFunction()">Display</button></td>
+<td></td>
+</tr>
+</table>
 </div>
 <br><br>
-
-
 <!-- Create rubic orthographic -->
 <div class="grid-container">
   <div class="grid-item"></div>
@@ -49,13 +53,15 @@
   <div class="grid-item"></div> 
 </div>
 <br><br>
-
 <div class ="rub">
 <!--initialize six color matrix saver code with zero -->
-<p>Push button to initialize virtual matrix that store color code for faces</p>
- <button type="button" onclick="initializeFunction()">initialization</button>
- <p id="demo1"></p>
- 
+<table>
+<tr>
+<td><p>Push button to initialize virtual matrix that store color code for faces</p></td>
+<td><button type="button" onclick="initializeFunction()">initialization</button></td>
+<td><p id="demo1"></p></td>
+</tr>
+</table>
  <!-- chooses rotation of axis x,y, x -->
   <table>
   <tr>
@@ -94,10 +100,8 @@
   </td>
   </tr>
   </table>
-  
  
-
-    </select>
+  </select>
   <br><br>
   <p>Choose position of cell to be rotate between 1 and matrix dimension</p>
   <input id="cellRotation" value="2">
@@ -112,10 +116,8 @@
   <!--
   </select>-->
   <br><br> 
-  <button type="button" onclick="rotationFunction()">Rotate</button>
-  
+  <button type="button" onclick="rotationFunction()">Rotate</button> 
 </div>
-
 <br>
 <!--Call javaScript code for create rubic orthographic -->
 <script src="mainFunctionScript.js"></script>
